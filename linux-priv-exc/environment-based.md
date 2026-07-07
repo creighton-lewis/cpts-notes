@@ -45,10 +45,21 @@ vim
 :shell
 ```
 
-```
-echo "something" | tee something.sh
-```
 
+```perl -e 'exec "/bin/sh";'
+```
+```
+perl: exec "/bin/sh";
+```
+```
+ruby: exec "/bin/sh"
+```
+```
+lua: os.execute('/bin/sh')
+```
+```
+irb(main:001:0> exec "/bin/sh"
+```
 # Set UID/SUID Permissions 
 
 
