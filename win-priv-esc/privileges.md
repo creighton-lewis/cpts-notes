@@ -6,6 +6,11 @@ whoami /priv
 What it does: Grants users critical access to system components and can be utilized for remote command execution 
 # SeTakeOwnership
 What it does: Lets you take ownership of certain files 
+
+```
+takeown /f 'C:\some\file.txt' #Now the file is owned by you
+icacls 'C:\some\file.txt' /grant <your_username>:F #Now you have full access
+```
 # SeImpersonatePrivilege
 What it does: Lets you impersonate system user 
 ## Common tools: 
