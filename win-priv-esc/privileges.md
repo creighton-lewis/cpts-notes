@@ -1,5 +1,5 @@
-#SeDebugPrivilege 
-#SeTakeOwnership
-#SeImpersonatePrivilege
-#SeLoadDriverPrivilege
-#SeBackupPrivilege
+# SeDebugPrivilege 
+# SeTakeOwnership
+# SeImpersonatePrivilege
+# SeLoadDriverPrivilege
+# SeBackupPrivilege
