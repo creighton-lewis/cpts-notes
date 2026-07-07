@@ -1,7 +1,22 @@
 # Active Directory 
 ## External Enumeration 
+### What to look for 
+- IP space 
+- Domain information 
+- Schema format 
+- Data disclosures 
+- Breach data
+### Where to look for 
+### ASN/ IP registrars 
+#### Domain Registrars 
+- Domaintools 
+- PTRArchive 
+- ICANN 
+#### Public-facing websites 
+#### loud & Dev Storage Spaces 
+#### Have I Been Pwned
+#### BGP-Toolkit 
 ## Internal Enumeration 
-### AD Module 
 ```
 Get-Module 
 ```
@@ -42,12 +57,12 @@ Get-Domain
 ```
 
 ```
-Get-DomainController
+Get-DomainController # returns list of domain controllers for specific domain 
 ```
 
 
 ```
-Get DomainUser 
+Get DomainUser #Will return all users or specific user objects in AD 
 ```
 
 ```
@@ -113,9 +128,26 @@ Get-DomainTrustMapping
 
 ```
 Test-AdminAccess -Computer ACADEMY-EA-MS01 
+Get-DomainUser -SPN -Properties samaccountname,ServicePrincipalName
+
 ```
 
+### Sharpview 
+- Similar capabilities to powerview 
+### Bloodhound / SharpHound
+> [!NOTE]  
+> Must be domain user from Windows attack host positioned within network but not joined to the domain OR transfer tool to domain-joined host 
+
+- Type 'bloodhound' into cmd or powershell 
+- Enter credentials 
+- Click on upload data and open 
+
+- Can start by typing domain 
+- View result of pre-built queries in analyiss tab
+
+Find Computers where Domain Users are Local Admin
 ## Lateral Movement 
+
 ## Privilege Escalation 
 ## Exploitation (from Linux)
 ## Exploitation (from Windows )
