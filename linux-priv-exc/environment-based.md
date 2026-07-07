@@ -39,6 +39,15 @@ python -c 'import os; os.system("/bin/sh")'
 python -c 'import pty; pty.spawn("/bin/bash")'
 ```
 
+```bash
+vim
+:set shell=/bin/bash
+:shell
+```
+
+```
+echo "something" | tee something.sh
+
 # Set UID/SUID Permissions 
 
 
