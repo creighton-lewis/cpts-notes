@@ -12,11 +12,13 @@
 6. **Escalate** — once XSS is confirmed, escalate from alert() to cookie theft, session hijacking, or CSRF
 
 # Resources 
-https://brandonrussell.io/OSCP-Notes/XXMore.html
+[Brandon Russel] (https://brandonrussell.io/OSCP-Notes/XXMore.html)
+
 [Burp Cheat Sheet](https://portswigger.net/web-security/cross-site-scripting/cheat-sheet)
+
 [XSS Payloads](https://github.com/justdsn/XSSPayloads/blob/main/cookie_based_xss_payloads.txt)
 
-https://github.com/justdsn/XSSPayloads
+[More XSS Payloads] https://github.com/justdsn/XSSPayloads
 https://swisskyrepo.github.io/PayloadsAllTheThings/XSS%20Injection/1%20-%20XSS%20Filter%20Bypass/#bypass-quotes-for-string
 
 ```
