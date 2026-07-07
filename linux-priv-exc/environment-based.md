@@ -85,10 +85,14 @@ find / -uid 0 -perm -6000 -type f 2>/dev/null
 
 # Sudo Rights Abuse 
 
-```sudo --version # use searchsploit to find vulnerable versions 
+```
+sudo --version # use searchsploit to find vulnerable versions 
+
 ```
 
-```sudo -l #shows what users can run with sudo privileges
+```
+sudo -l #shows what users can run with sudo privileges
+
 ```
 ## Example 1 : No password needed
 ```
