@@ -1,5 +1,5 @@
 Tool
-Connecting
+# Connecting
 
 ```
 mysql -u root -p
