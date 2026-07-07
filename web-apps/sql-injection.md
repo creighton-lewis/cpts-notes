@@ -71,15 +71,20 @@ UNION select 1,
 ### Comments
 Comments can be added to prevent certain logic from being executed. Anything found after a -- or ## is not executed
 Parentheses can also be used to ensure certain conditions are checked before others
-Union Clause
+#### Union Clause
 Union clauses combine results from SELECT statements
 Data types from each column MUST be the same, and the number of columns in each table MUST also match
-`SELECT a, b FROM table1 UNION SELECT c, d FROM table2
-SELECT * FROM ports UNION SELECT * FROM ships`
 
+```
+SELECT a, b FROM table1 UNION SELECT c, d FROM table2
+SELECT * FROM ports UNION SELECT * FROM ships`
+```
+
+```
 ports: table 
 ships: another table 
 Determining Column Number
+```
 
 ORDER BY
 UNION
@@ -100,6 +105,8 @@ In-band
 Union Based: Exact location must be specified
 logic can be subverted by using various payloads like the following
 
+```
+
 '
 
 ''
@@ -108,7 +115,7 @@ logic can be subverted by using various payloads like the following
 ;
 
 )
-
+```
 OR injections
 
 can be used
