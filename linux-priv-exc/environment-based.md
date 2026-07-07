@@ -47,6 +47,7 @@ vim
 
 ```
 echo "something" | tee something.sh
+```
 
 # Set UID/SUID Permissions 
 
