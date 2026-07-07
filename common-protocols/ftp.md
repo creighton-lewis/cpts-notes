@@ -72,7 +72,6 @@ get filename
 
 ```
 
-![[Alternative Vault/01. Methodologies/B. Web Application/File Inclusion#RFI#FTP]]
 # Post Exploitation 
 
 ## Reverse Shell 
