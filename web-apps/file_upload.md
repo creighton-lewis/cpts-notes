@@ -6,7 +6,8 @@ https://raw.githubusercontent.com/Noredo/Wordlist-file-upload-extension-bypass/r
 https://raw.githubusercontent.com/danielmiessler/SecLists/refs/heads/master/Discovery/Web-Content/web-extensions.txt
 
 - Replace the end of the image or file name with this in burpsuite 
-- ```
+
+   ```
 for char in '%20' '%0a' '%00' '%0d0a' '/' '.\\' '.' '…' ':'; do
     for ext in '.php' '.phps'; do
         echo "shell$char$ext.jpg" >> wordlist.txt
@@ -21,7 +22,8 @@ done
 
 ## Content Type 
 
-- Tricks website into thinking that a file that is not an image is an image 
+- Tricks website into thinking that a file that is not an image is an image
+
 ```
 brainiac101@htb[/htb]$ wget https://raw.githubusercontent.com/danielmiessler/SecLists/refs/heads/master/Discovery/Web-Content/web-all-content-types.txt brainiac101@htb[/htb]$ cat web-all-content-types.txt | grep 'image/' > image-content-types.txt
 ```
