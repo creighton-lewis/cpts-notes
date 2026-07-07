@@ -8,12 +8,12 @@ What it does: Grants users critical access to system components and can be utili
 What it does: Lets you take ownership of certain files 
 # SeImpersonatePrivilege
 What it does: Lets you impersonate system user 
-Common tools: 
-- Juicypotato
-- RogueWinRM
-- Sweet Potato
-- PrintSpoofer
-- JuicyPotatoNG
+## Common tools: 
+### Juicypotato
+### RogueWinRM
+### Sweet Potato
+### PrintSpoofer
+### JuicyPotatoNG
 # SeLoadDriverPrivilege
 
 # SeBackupPrivilege
