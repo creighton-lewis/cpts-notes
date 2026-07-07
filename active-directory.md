@@ -77,6 +77,20 @@ Get-DomainFileServer
 Get-DomainDFShare
 ```
 
+**GPO Enumeration**
+Get-DomainGPO 
+Get-DomainPolicy 
+**Computer Enumeration** 
+```
+Get-NetLocalGroup 
+Get-NetLocalGroupMember
+Get-NetShare 
+Test-AdminAccess
+Find-DomainUserLocation
+Find-DomainShare # Finds reachable shares on domain machines 
+FindInterestingDomainShareFile # Searches for files matching specific criteria on readable shares in the domain 
+```
+
 ## Lateral Movement 
 ## Privilege Escalation 
 ## Exploitation (from Linux)
