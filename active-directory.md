@@ -90,6 +90,13 @@ Find-DomainUserLocation
 Find-DomainShare # Finds reachable shares on domain machines 
 FindInterestingDomainShareFile # Searches for files matching specific criteria on readable shares in the domain 
 ```
+**Domain User Information**
+```
+Get-DomainUser -Identity mmorgan -Domain inlanefreight.local | Select-Object -Property name,samaccountname,description,memberof,whencreated,pwdlastset,lastlogontimestamp,accountexpires,admincount,userprincipalname,serviceprincipalname,useraccountcontrol
+```
+```
+Get-DomainGroupMember -Identity "Domain Admins" -Recurse
+```
 
 ## Lateral Movement 
 ## Privilege Escalation 
