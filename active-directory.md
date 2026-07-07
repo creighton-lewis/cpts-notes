@@ -7,11 +7,13 @@
 - Data disclosures 
 - Breach data
 ### Where to look for 
-### ASN/ IP registrars 
-#### Domain Registrars 
-- Domaintools 
-- PTRArchive 
-- ICANN 
+
+[DomainTools](https://whois.domaintools.com/)
+[PTR-Arcive](https://www.whatsmydns.net/dns-lookup/ptr-records)
+[TruffleHog](https://github.com/trufflesecurity/truffleHog)
+[Linkedin2Username](https://github.com/initstring/linkedin2username)
+[DeHashed](https://dehashed.com/search#breachCheck)
+- Social Media 
 #### Public-facing websites 
 #### loud & Dev Storage Spaces 
 #### Have I Been Pwned
