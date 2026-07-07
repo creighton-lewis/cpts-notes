@@ -35,6 +35,7 @@ docker image ls #answers what docker images we have access to
 psexec -u <user> <command>  
 
 psexec -u root id
+
 ```
 ## Kubernates 
 ## Logrotate 
