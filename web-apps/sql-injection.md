@@ -24,7 +24,7 @@ nuclei -u http://url -tag mysql
 ```
 sudo nmap -sV -sC 3306
 ```
-External
+# External
 Table Manipulation
 
 INSERT INTO table_name VALUES (column1_value, column2_value, column3_value); 
@@ -66,9 +66,9 @@ SELECT * from information_schema.columns
 Other Database Values
 UNION select 1, 
 
-Exploitation
-Logic Suberversion
-Comments
+# Exploitation
+## Logic Suberversion
+### Comments
 Comments can be added to prevent certain logic from being executed. Anything found after a -- or ## is not executed
 Parentheses can also be used to ensure certain conditions are checked before others
 Union Clause
