@@ -37,7 +37,8 @@ EXPN {user-name}
 - **Cleartext transmission:** Allowing on port 25 or 587 without enforcing STARTTLS or SMTPS exposes credentials and email content to interception 
 
 # Exploitation 
-[!NOTE need more information about what is going on here.]
+> [!NOTE]  
+> Highlights information that users should take into account, even when skimming.
 ```
 swaks --from notifications@inlanefreight.com --to employees@inlanefreight.com --header 'Subject: Company Notification' --body 'Hi All, we want to hear from you! Please complete the following survey. http://mycustomphishinglink.com/' --server 10.10.11.213
 ```
