@@ -333,3 +333,11 @@ Register-PSSessionConfiguration -Name backupadmsess -RunAsCredential inlanefreig
 Restart-Service WinRM
 
 ```
+## Misconfigurations 
+**Exchange Related Group** 
+**Exchange Related Group Organization Management** 
+- Vectors for privilege escalation
+**Printer Bug**
+  Import-Module .\SecurityAssessment.ps1
+  Get-SpoolStatus -ComputerName ACADEMY-EA-DC01.INLANEFREIGHT.LOCAL
+
