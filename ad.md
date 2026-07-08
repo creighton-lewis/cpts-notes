@@ -242,8 +242,11 @@ Add-DomainGroupMember -Identity 'Help Desk Level 1' -Members 'damundsen' -Creden
 ```
 ### Creating fake SPN 
 
+> [!NOTE]  
+> Must be domain user from Windows attack host positioned within network but not joined to the domain OR transfer tool to domain-joined host
+
 [!NOTE]  
-> Must be authenticated as member of group to be successful. 
+Must be authenticated as member of group to be successful. 
 > Process: Create fake SPN -> Use rubeus.exe -> crack hashes -> cleanup 
 
 **Fake SPN Creation**
