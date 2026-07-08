@@ -200,7 +200,7 @@ Find-InterestingDomainACL
 
 
 ### Changing User Password Based on ACL Information 
- [!NOTE]  
+[!NOTE]  
 > Must authenticate as the user who is able to force change user passwords
 1. Creates PSCredential Object
 ``` 
