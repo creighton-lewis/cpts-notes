@@ -104,4 +104,4 @@ User demo may run the following commands on crashlab:
 sudo vim '!sh'
 ```
 
-# Privileged Group s
+# Privileged Groups
