@@ -1,10 +1,10 @@
 # Active Directory 
-Related: 
 Terminology 
 - Active Directory
 - GPO
 - SID
 - GUID
+Related: [Win-Priv-Esc](https://github.com/creighton-lewis/oscp-prep/win-privl-esc.md)
 ## External Enumeration 
 ### What to look for 
 - IP space 
