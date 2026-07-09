@@ -401,8 +401,8 @@ Trust: Used to establish forest-forest or domain-domain authentication; lets use
 netdom query /domain:inlanefreight.local trust
 netdom query /domain:inlanefreight.local dc
 netdom query /domain:inlanefreight.local workstation
-
+```
 
 Direction Trusted\Trusting domain  
-```
+
   
