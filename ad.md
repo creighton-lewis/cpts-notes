@@ -389,15 +389,23 @@ Get-GPO -Guid 7CA9C789-14CE-46E3-A722-83F4097AF532
 ## Domain Trusts 
 Trust: Used to establish forest-forest or domain-domain authentication; lets users access resources
 **Transitive vs Non-Transitive**
+
 - Transitive: Loose trust configuration
+  
 - Non-Transitive: Strict, direct trust configuration
+  
 **Common Trust Arrangements** 
+
 - Parent-child: Two or more domains within same forest
+
 - Cross link: Trust between child domains to speed up authentication
+
 - External: Non-transitive between two separate domains in separate forests
+
 - Tree-root: Two way transitive trust between forest root domain and new tree root domain
+
 - Forest: Transitive trust between two forest root domains 
-- Can be enumerated with PowerView Get-DomainTrust function and Bloodhound
+
 **Trust Enumeration**
 
 ```
