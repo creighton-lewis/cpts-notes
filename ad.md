@@ -7,6 +7,7 @@ Terminology
 
 Related: [Win-Priv-Esc](https://github.com/creighton-lewis/oscp-prep/blob/main/win-privl-esc.md)
 ## External Enumeration 
+
 ### What to look for 
 - IP space 
 - Domain information 
