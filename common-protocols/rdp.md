@@ -85,3 +85,7 @@ Enable-NetFirewallRule -DisplayGroup "Remote Desktop"
 ```
 Get-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Control\Terminal Server\' -Name "fDenyTSConnections" #output should be zero if successful
 ```
+## Enable RDP Script 
+>[!NOTE]
+> User must have admin credentials 
+https://github.com/Y3llowDuck/RDP-Automation/blob/main/RDP-Automation.ps1
