@@ -226,7 +226,7 @@ REG QUERY HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Policies\
 
 
 ```powershell imp:3
-``cmd /c echo %PATH%``
+cmd /c echo %PATH%
 
 # determines what folders are within user's profile and writable. given to find out where we need to be when downloading our reverse shell
 ```
@@ -236,10 +236,10 @@ REG QUERY HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Policies\
 [UAC-Information](https://github.com/nickvourd/Windows-Local-Privilege-Escalation-Cookbook/blob/master/Notes/UACBypass.md) | [UACMe Project](https://github.com/hfiref0x/UACME)
 #### Weak Permissions 
 binary path
-**Enumeration 
+**Enumeration**
 - check ownership 
 - check icals
-==where does this need to be run? in cmd prompt or in powershell session? ==
+- run in cmd session, not powershell 
 ```prompt:cmd|C:\Tools
 accesschk.exe -kwsu "Everyone" HKLM\SYSTEM\CurrentControlSet\Services  
 
@@ -276,7 +276,6 @@ net localgroup administrators
 
 ---
 **Unquoted Service Path** 
-[AxelRode](https://www.drakeaxelrod.com/notes/windows/unquoted-service-path)
 [[Unquoted Service Path Script]]
 
 > [!INFO]
