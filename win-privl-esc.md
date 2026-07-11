@@ -1,6 +1,7 @@
 # Windows Priv Escalation  
 Winpeas
-PowerUp
+
+[PowerUP](https://raw.githubusercontent.com/PowerShellEmpire/PowerTools/refs/heads/master/PowerUp/PowerUp.ps1)
 ## Privileges 
 ```
 whoami /priv
