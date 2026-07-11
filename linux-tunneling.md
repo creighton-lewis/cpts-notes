@@ -5,11 +5,7 @@
 
 Local Port Forwarding: 
 
-
-
 ## PTunnel-NG 
-- used to create tunnel between ubuntu server/target host and attack attack host  
-sudo ./ptunnel-ng -r<PIVOT_IP> -R22
 
 **Server(Pivot Host)**
 ```prompt:bash 
