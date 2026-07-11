@@ -23,3 +23,9 @@ netsh.exe interface portproxy add v4tov4 listenport=8080 listenaddress=10.129.15
 netsh.exe interface portproxy show v4tov4
 ```
 # SocksOverRDPx64
+```
+regsvr32.exe SocksOverRDP-Plugin.dll
+```
+```
+netstat -antb | findstr 1080
+```
