@@ -1,4 +1,4 @@
-# LSASS Dump Tools 
+# Lateral Movement
 > [!NOTE]  
 > Requires admin privileges 
 ## miniDUMP 
