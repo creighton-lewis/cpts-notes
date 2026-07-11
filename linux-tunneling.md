@@ -9,12 +9,12 @@ Local Port Forwarding:
 
 **Server(Pivot Host)**
 ```prompt:bash 
-sudo ./ptunnel-ng -r10.129.202.64 -R22
+sudo ./ptunnel-ng -r<pivot-ip> -R22
 # highlighted = ip of jump box you want to accept connections on or whatever is accessible from attacking machine
 ```
 **Client(Attack Host)** 
 ```bash prompt:kali
-sudo ./ptunnel-ng -p10.129.202.64 -l2222 -r10.129.202.64 -R22
+sudo ./ptunnel-ng -p<pivot-ip>-l2222 -r<pivot-ip> -R22
 ```
 
 ---
