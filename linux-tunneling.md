@@ -1,8 +1,8 @@
-# Port Tunneling and Forwarding 
+# Linux Port Tunneling and Forwarding 
 # Basics 
 - When used: you are on a windows machine and you want to route traffic from within side a network to your local device or ip address 
 - Commonly used tools include proxychains 
-- Sometimes, 
+
 
 
 **ptunnel-ng** 
