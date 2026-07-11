@@ -68,3 +68,24 @@ xfreerdp /v:192.168.220.152 /u:lewen \
 /path:300FF5E89EF33F83A8146C10F5AB9BB9
 
 ```
+## Enable RDP 
+- Open powershell with administrative privileges
+- Check to make sure it is enabled
+```
+Get-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Control\Terminal Server\' -Name "fDenyTSConnections"
+```
+
+```
+Set-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Control\Terminal Server\' -Name "fDenyTSConnections" -Value 0
+```
+
+```
+Enable-NetFirewallRule -DisplayGroup "Remote Desktop"
+```
+```
+Get-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Control\Terminal Server\' -Name "fDenyTSConnections" #output should be zero if successful
+```
+## Enable RDP Script 
+>[!NOTE]
+> User must have admin credentials 
+https://github.com/Y3llowDuck/RDP-Automation/blob/main/RDP-Automation.ps1

