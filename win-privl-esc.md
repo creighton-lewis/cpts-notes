@@ -1,5 +1,6 @@
 # Windows Priv Escalation  
 
+
 ## Privileges 
 ```
 whoami /priv
