@@ -1,18 +1,22 @@
 # Linux Port Tunneling and Forwarding 
 # Basics 
 - When used: you are on a windows machine and you want to route traffic from within side a network to your local device or ip address 
-- Commonly used tools include proxychains 
+- Commonly used tools include proxychains
+
+Local Port Forwarding: 
 
 
 
-**ptunnel-ng** 
+## PTunnel-NG 
 - used to create tunnel between ubuntu server/target host and attack attack host  
-**target-host**
+sudo ./ptunnel-ng -r<PIVOT_IP> -R22
+
+**Server(Pivot Host)**
 ```prompt:bash 
 sudo ./ptunnel-ng -r10.129.202.64 -R22
 # highlighted = ip of jump box you want to accept connections on or whatever is accessible from attacking machine
 ```
-**attack-host** 
+**Client(Attack Host)** 
 ```bash prompt:kali
 sudo ./ptunnel-ng -p10.129.202.64 -l2222 -r10.129.202.64 -R22
 ```
