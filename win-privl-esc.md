@@ -33,6 +33,8 @@ GodPotato -cmd "cmd /c whoami"
 
 
 ##### PrintSpoofer
+>[!NOTE]
+>What software or operating systems or windows versions does printspoofer work?
 
 ```
 .\PrintSpoofer.exe -i -c cmd
