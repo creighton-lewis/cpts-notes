@@ -4,6 +4,8 @@
 [Sherlock](https://github.com/rasta-mouse/Sherlock/blob/master/Sherlock.ps1)
 
 [PowerUP](https://raw.githubusercontent.com/PowerShellEmpire/PowerTools/refs/heads/master/PowerUp/PowerUp.ps1)
+
+[Snaffler](https://github.com/SnaffCon/Snaffler/releases)
 ## Local Privileges 
 ```
 whoami /priv
