@@ -1,5 +1,5 @@
 # Linux Files 
-
+[Linux Lateral Movement](https://raw.githubusercontent.com/creighton-lewis/oscp-prep/refs/heads/main/linux-lat-move.md)
 
 # Windows Files 
 
