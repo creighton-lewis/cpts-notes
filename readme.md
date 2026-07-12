@@ -14,3 +14,5 @@
 # Web Application
 
 [File-Inclusion](https://github.com/creighton-lewis/oscp-prep/blob/main/web-apps/file_inclusion.md)
+
+[File Upload](https://github.com/creighton-lewis/oscp-prep/blob/main/web-apps/file_upload.md)
