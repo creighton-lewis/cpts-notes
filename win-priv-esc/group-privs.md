@@ -82,7 +82,8 @@ Get-Service -Name AppReadiness | Select-Object *
 c:\Tools\PsService.exe security AppReadiness 
 
 ```
-Payload/Priv Esc
+**Payload/Priv Esc**
+
 > [!NOTE] Payload Consideration
 > All of what is mentioned below is REQUIRED to get this to work, none of it is not important 
 
